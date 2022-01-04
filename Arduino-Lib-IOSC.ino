@@ -1,10 +1,9 @@
 #include "config.h"
+extern String stringSplit[];
 
 void setup() {
+    configIOInit(PINSTART, PINFINAL);
     configSerialPort();
-    #ifdef DEBUG
-        SerialUSB.println("MODO DEBUG... "); 
-    #endif
 }
 
 void loop() {
