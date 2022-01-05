@@ -1,12 +1,22 @@
 #include "Arduino.h"
 #include "config.h"
 
-void configIOInit(uint8_t pinStart, uint8_t pinFinal){
+void configInput(uint8_t pinStart, uint8_t pinFinal){
     //Inicializamos I/O
     for (int i = pinStart; i <= pinFinal; i++) {
         pinMode(i, INPUT);
     }
 }
+
+
+void configOutput(uint8_t pinStart, uint8_t pinFinal){
+    //Inicializamos I/O
+    for (int i = pinStart; i <= pinFinal; i++) {
+        pinMode(i, OUTPUT);
+        digitalWrite(i,LOW);
+    }
+}
+
 
 void configSerialPort(){
     //como se usa modo USB en serial no hace falta indicar el bps

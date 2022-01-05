@@ -5,8 +5,8 @@
 #define DISABLE   LOW
 
 #define DEBUG     ENABLE
-#define TEENSY2   ENABLE
-#define TEENSY4   DISABLE
+#define TEENSY2   
+//#define TEENSY4   
 
 #ifdef TEENSY2
 #define PINSTART  0
@@ -93,12 +93,21 @@
 #endif
 
 //Init
-void configIOInit(uint8_t , uint8_t );
+void configInput(uint8_t , uint8_t);
+void configOutput(uint8_t , uint8_t);
 void configSerialPort();
 
 //sprw
 String readCommands();
 void limpiarComandos();
+
+//cin
+uint32_t readInput(uint8_t, uint8_t);
+
+
+//cout
+void writeOutput(uint32_t , uint8_t , uint8_t );
+void printString(uint32_t);
 
 
 #endif
