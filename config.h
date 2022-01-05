@@ -92,6 +92,7 @@
 #define G1Pin     41
 #endif
 
+
 //Init
 void configInput(uint8_t , uint8_t);
 void configOutput(uint8_t , uint8_t);
@@ -107,7 +108,7 @@ uint32_t readInput(uint8_t, uint8_t);
 
 //cout
 void writeOutput(uint32_t , uint8_t , uint8_t );
-void printString(uint32_t);
-
+void printAddr(uint32_t);
+void printNumberOp(uint32_t);
 
 #endif

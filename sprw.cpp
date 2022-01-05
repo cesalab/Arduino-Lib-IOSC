@@ -1,5 +1,4 @@
 #include "Arduino.h"
-#include "config.h"
 
 #define MAX_CHAR 50
 #define MAX_COMMANDS 10
